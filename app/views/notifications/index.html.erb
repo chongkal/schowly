@@ -1,0 +1,7 @@
+<h1>Доска объявлений</h1>
+
+<ul>
+  <% @notifications.each do |notification| %>
+    <li><%= link_to notification.theme, notification %></li>
+  <% end %>
+</ul>

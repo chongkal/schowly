@@ -1,0 +1,7 @@
+<h1>Мои Учителя</h1>
+
+<ul>
+  <% @teachers.each do |teacher| %>
+    <li><%= link_to teacher.fname, teacher %></li>
+  <% end %>
+</ul>

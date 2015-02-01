@@ -1,0 +1,12 @@
+<p><%= link_to '< Все преподаватели', teachers_path %></p>
+
+<h1><%= @teacher.fname %> <%= @teacher.lname %></h1>
+<p>Все предметы
+</p>
+<ul>
+  <% @teacher.school_classes.each do |schoolClass| %>
+      <li><%= link_to schoolClass.name, schoolClass %></li>
+  <% end %>
+</ul>
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SchoolApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="row">
+      <ul>
+        <li<%= controller_name == 'schools' ? raw('class = "active"') : '' %>> <%= link_to 'Школа', schools_path %></li>
+        <li<%= controller_name == 'school_classes' ? raw('class = "active"') : '' %>> <%= link_to 'Расписание', school_classes_path %></li>
+        <li<%= controller_name == 'homeworks' ? raw('class = "active"') : '' %>> <%= link_to 'Домашнее задание', homeworks_path %></li>
+        <li<%= controller_name == 'students' ? raw('class = "active"') : '' %>> <%= link_to 'Мои одноклассники', students_path %></li>
+        <li<%= controller_name == 'teachers' ? raw('class = "active"') : '' %>> <%= link_to 'Мои учителя', teachers_path %></li>
+        <li<%= controller_name == 'notifications' ? raw('class = "active"') : '' %>> <%= link_to 'Доска объявлений', notifications_path %></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<%= yield %>
+
+</body>
+</html>

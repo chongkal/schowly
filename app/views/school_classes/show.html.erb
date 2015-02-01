@@ -1,0 +1,5 @@
+<p><%= link_to '< Расписание', school_classes_path %></p>
+
+<h1><%= @schoolClass.name %></h1>
+<p>Преподаватель: <%= @schoolClass.teacher.fname %> <%= @schoolClass.teacher.lname %></p>
+<p>Домашнее задание <%= @schoolClass.homework.name %></p>
